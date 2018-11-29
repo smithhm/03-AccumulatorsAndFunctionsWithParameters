@@ -47,6 +47,12 @@ def run_test_distance():
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
+    # Test 4:
+    expected = 5
+    answer = distance(rg.Point(-3, -4))
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
 
 def distance(point):
     """
@@ -57,9 +63,14 @@ def distance(point):
       If the argument is  rg.Point(3, 4)  this function returns 5.
     """
     # This code has an error, on purpose.  Do NOT fix it.
+    # print('point is:', point)
     x_squared = point.x * point.x
+    # print('x_squared is:', x_squared)
     y_squared = point.y * point.x
+    # y_squared = point.y * point.y  corrected code
+    # print('y_squared is:', y_squared)
 
+    # print('sqrt is:', math.sqrt(x_squared + y_squared))
     return math.sqrt(x_squared + y_squared)
 
 
